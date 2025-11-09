@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Finance Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="dashboard">
+    
+    <!-- Balance Card -->
+    <div class="card balance-card">
+      <h4>Hello, Adithya 👋</h4>
+      <h2 id="balance">$0.00</h2>
+      <p>Current Balance</p>
+      <div class="card-details">
+        <span>**** 4202</span>
+        <span class="chip"></span>
+      </div>
+
+      <div class="transaction-input">
+        <input id="desc" type="text" placeholder="Description (e.g., Figma)" />
+        <input id="amount" type="number" placeholder="Amount" />
+        <select id="type">
+          <option value="income">Income</option>
+          <option value="expense">Expense</option>
+        </select>
+        <button id="add">Add</button>
+      </div>
+    </div>
+
+    <!-- Statistics Card -->
+    <div class="card stats-card">
+      <div class="stats-header">
+        <h3>Statistics</h3>
+        <p id="chart-date"></p>
+      </div>
+
+      <canvas id="lineChart"></canvas>
+
+      <div class="spending-list">
+        <h4>Transactions</h4>
+        <div id="transactions" class="transaction-list"></div>
+      </div>
+    </div>
+
+    <!-- Invoice Card -->
+    <div class="card invoice-card">
+      <h3>Invoice Summary</h3>
+      <p>Latest Overview</p>
+
+      <div class="pricing">
+        <div><span>Total Income</span><span id="total-income">$0.00</span></div>
+        <div><span>Total Expense</span><span id="total-expense">$0.00</span></div>
+      </div>
+
+      <div class="total">
+        <h4>Net Balance</h4>
+        <h3 id="net">$0.00</h3>
+      </div>
+
+      <button class="save-btn" id="clear">Reset All</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
